@@ -22,9 +22,11 @@ export default function Home() {
         <div className="container mx-auto px-6 py-4 flex justify-between items-center">
           <h1 className="text-2xl font-bold text-blue-600">CareerPath PK</h1>
           <nav className="space-x-4">
-            <Link href="/" className="text-gray-600 hover:text-blue-600">Home</Link>
-            <Link href="/opportunities" className="text-gray-600 hover:text-blue-600">Opportunities</Link>
-          </nav>
+  <Link href="/" className="text-gray-600 hover:text-blue-600">Home</Link>
+  <Link href="/opportunities" className="text-gray-600 hover:text-blue-600">Opportunities</Link>
+  <Link href="/blog" className="text-gray-600 hover:text-blue-600">Blog</Link>
+  <Link href="/about" className="text-gray-600 hover:text-blue-600">About</Link>
+</nav>
         </div>
       </header>
 
