@@ -11,7 +11,7 @@ const degreeData: Record<string, {
   "BS Computer Science / IT": {
     risk: 'Low',
     riskColor: 'bg-green-100 text-green-700',
-    reality: 'High demand, but a degree alone isn't enough. You need practical coding skills and a portfolio. Avoid weak/unaccredited institutes.",
+    reality: "High demand, but a degree alone isn't enough. You need practical coding skills and a portfolio. Avoid weak/unaccredited institutes.",
     plan: [
       { year: 'Year 1', action: 'Master programming fundamentals (C++, Java, or Python) and basic Data Structures.' },
       { year: 'Year 2', action: 'Pick a track (Web, Mobile, or AI). Start building small personal projects on GitHub.' },
