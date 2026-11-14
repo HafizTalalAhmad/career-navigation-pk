@@ -2,26 +2,51 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-  body {
-    @apply bg-slate-50 text-slate-800 antialiased;
-  }
-  h1, h2, h3, h4, h5, h6 {
-    @apply tracking-tight;
-  }
+body {
+  background-color: #f8fafc; /* slate-50 */
+  color: #1e293b; /* slate-800 */
+  -webkit-font-smoothing: antialiased;
 }
 
-@layer components {
-  /* Premium Card Design */
-  .card {
-    @apply bg-white rounded-2xl border border-slate-200/80 shadow-sm transition-all duration-300 hover:shadow-xl hover:-translate-y-1;
-  }
-  /* Primary Button */
-  .btn-primary {
-    @apply inline-flex items-center justify-center bg-blue-600 text-white font-semibold py-3 px-6 rounded-xl hover:bg-blue-700 transition-all duration-300 shadow-sm hover:shadow-md;
-  }
-  /* Navigation Link */
-  .nav-link {
-    @apply text-slate-600 hover:text-blue-600 font-medium transition-colors duration-200;
-  }
+h1, h2, h3, h4, h5, h6 {
+  letter-spacing: -0.025em;
+}
+
+/* Premium Card Design */
+.card {
+  background-color: #ffffff;
+  border-radius: 1rem;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+.card:hover {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  transform: translateY(-4px);
+}
+
+/* Primary Button */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #2563eb; /* blue-600 */
+  color: #ffffff;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.75rem;
+  transition: background-color 0.3s ease;
+}
+.btn-primary:hover {
+  background-color: #1d4ed8; /* blue-700 */
+}
+
+/* Navigation Link */
+.nav-link {
+  color: #475569; /* slate-600 */
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+.nav-link:hover {
+  color: #2563eb; /* blue-600 */
 }
