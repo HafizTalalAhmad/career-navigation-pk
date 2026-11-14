@@ -23,6 +23,7 @@ export default function Home() {
           <h1 className="text-2xl font-bold text-blue-600">CareerPath PK</h1>
             <nav className="space-x-4">
               <Link href="/" className="text-gray-600 hover:text-blue-600">Home</Link>
+              <Link href="/navigator" className="bg-white text-blue-600 font-bold py-3 px-8 rounded-full hover:bg-blue-50 transition">Find My Pathway</Link>
               <Link href="/quiz" className="text-gray-600 hover:text-blue-600">Take Quiz</Link>
               <Link href="/universities" className="text-gray-600 hover:text-blue-600">Universities</Link>
               <Link href="/opportunities" className="text-gray-600 hover:text-blue-600">Opportunities</Link>
