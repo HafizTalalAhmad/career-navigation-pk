@@ -27,6 +27,7 @@ export default function Home() {
               <Link href="/quiz" className="text-gray-600 hover:text-blue-600">Take Quiz</Link>
               <Link href="/universities" className="text-gray-600 hover:text-blue-600">Universities</Link>
               <Link href="/opportunities" className="text-gray-600 hover:text-blue-600">Opportunities</Link>
+              <Link href="/funding" className="text-gray-600 hover:text-blue-600">Funding</Link>
               <Link href="/blog" className="text-gray-600 hover:text-blue-600">Blog</Link>
               <Link href="/about" className="text-gray-600 hover:text-blue-600">About</Link>
           </nav>
