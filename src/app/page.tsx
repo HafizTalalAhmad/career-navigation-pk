@@ -1,91 +1,75 @@
 import Link from 'next/link';
 
-const educationLevels = [
-  { name: 'Matric (SSC)', slug: 'matric', icon: '🎓', desc: 'Science, Computer Science, Arts, Vocational' },
-  { name: 'Inter (HSSC)', slug: 'inter', icon: '📚', desc: 'Pre-Eng, Pre-Med, ICS, I.Com, FA' },
-  { name: 'Bachelor', slug: 'bachelor', icon: '🏛️', desc: 'BS 4-year programs, BBA, Engineering, Medicine' },
-  { name: 'Master', slug: 'master', icon: '🧠', desc: 'MS/MPhil, CSS Exam, Job Market Entry' },
-];
-
-const latestOpportunities = [
-  { title: 'Stipendium Hungaricum 2025', scope: 'international', deadline: '2025-01-15', desc: 'Fully funded scholarships for Pakistani students to study in Hungary.' },
-  { title: 'PPSC Lecturer Jobs', scope: 'local', deadline: '2024-12-20', desc: 'Punjab Public Service Commission announces lecturer vacancies.' },
-  { title: 'e-Rozgaar Free Freelancing Course', scope: 'local', deadline: '2024-12-10', desc: 'Free 3-month training by Punjab IT Board.' }
+const tools = [
+  { title: 'Matric-to-Career Navigator', desc: 'Enter your marks and group to see exactly which pathways are open to you.', href: '/navigator', icon: '🧭', color: 'bg-blue-50 text-blue-600' },
+  { title: 'Degree Risk & Skill Planner', desc: 'Avoid the "useless degree" trap. See realistic 4-year employment plans.', href: '/degree-planner', desc2: '', icon: '📈', color: 'bg-emerald-50 text-emerald-600' },
+  { title: 'Funding & Scholarships', desc: 'Find verified financial aid, loans, and free IT training programs.', href: '/funding', icon: '💰', color: 'bg-amber-50 text-amber-600' },
+  { title: 'Parent Confidence Report', desc: 'Generate a side-by-side comparison to help your family understand your choices.', href: '/parent-report', icon: '🤝', color: 'bg-purple-50 text-purple-600' },
 ];
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-gray-50 text-gray-800">
+    <div className="bg-slate-50">
       
-      {/* Header */}
-      <header className="bg-white shadow-sm">
-        <div className="container mx-auto px-6 py-4 flex justify-between items-center">
-          <h1 className="text-2xl font-bold text-blue-600">CareerPath PK</h1>
-            <nav className="space-x-4">
-              <Link href="/" className="text-gray-600 hover:text-blue-600">Home</Link>
-              <Link href="/navigator" className="bg-white text-blue-600 font-bold py-3 px-8 rounded-full hover:bg-blue-50 transition">Find My Pathway</Link>
-              <Link href="/quiz" className="text-gray-600 hover:text-blue-600">Take Quiz</Link>
-              <Link href="/universities" className="text-gray-600 hover:text-blue-600">Universities</Link>
-              <Link href="/opportunities" className="text-gray-600 hover:text-blue-600">Opportunities</Link>
-              <Link href="/funding" className="text-gray-600 hover:text-blue-600">Funding</Link>
-              <Link href="/degree-planner" className="text-gray-600 hover:text-blue-600">Degree Planner</Link>
-              <Link href="/parent-report" className="text-gray-600 hover:text-blue-600">Parent Report</Link>
-              <Link href="/blog" className="text-gray-600 hover:text-blue-600">Blog</Link>
-              <Link href="/about" className="text-gray-600 hover:text-blue-600">About</Link>
-          </nav>
-        </div>
-      </header>
-
       {/* Hero Section */}
-      <section className="bg-blue-600 text-white">
-        <div className="container mx-auto px-6 py-20 text-center">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">Confused about your future?</h2>
-          <p className="text-xl md:text-2xl mb-8 text-blue-100">Discover the perfect career path, scholarships, and opportunities after Matric, Inter, or Bachelor&apos;s.</p>
-          <Link href="/navigator" className="bg-white text-blue-600 font-bold py-3 px-8 rounded-full hover:bg-blue-50 transition">Find My Pathway</Link>
+      <section className="relative overflow-hidden bg-slate-900 text-white">
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-600 via-blue-700 to-slate-900 opacity-90"></div>
+        <div className="relative container mx-auto px-6 py-24 md:py-32 max-w-6xl text-center">
+          <span className="inline-block px-4 py-1 bg-white/10 backdrop-blur-md rounded-full text-sm font-medium text-blue-100 mb-6 border border-white/20">
+            🇵🇰 Built for Pakistani Students
+          </span>
+          <h1 className="text-4xl md:text-6xl font-extrabold mb-6 leading-tight">
+            Confused about your future?<br/>Find the right path.
+          </h1>
+          <p className="text-lg md:text-xl text-blue-100 max-w-3xl mx-auto mb-10">
+            Discover the perfect career path, scholarships, and opportunities after Matric, Inter, or Bachelor&rsquo;s — based on your marks, budget, and interests.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link href="/navigator" className="bg-white text-blue-700 font-bold py-4 px-8 rounded-xl hover:bg-blue-50 transition shadow-lg">
+              Find My Pathway →
+            </Link>
+            <Link href="/quiz" className="bg-white/10 backdrop-blur-md text-white font-bold py-4 px-8 rounded-xl hover:bg-white/20 transition border border-white/30">
+              Take Career Quiz
+            </Link>
+          </div>
         </div>
       </section>
 
-      {/* "What's Next?" Crossroad Section */}
-      <section className="container mx-auto px-6 py-16">
-        <h3 className="text-3xl font-bold text-center mb-12">Select Your Current Education Level</h3>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          
-          {educationLevels.map((level) => (
+      {/* Core Tools Section */}
+      <section className="container mx-auto px-6 py-20 max-w-6xl">
+        <div className="text-center mb-16">
+          <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">How we help you decide</h2>
+          <p className="text-lg text-slate-600 max-w-2xl mx-auto">We don't just list universities. We give you the tools to make a confident, informed decision.</p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {tools.map((tool) => (
             <Link 
-              key={level.slug} 
-              href={`/after/${level.slug}`} 
-              className="bg-white p-6 rounded-2xl shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all border border-gray-100 text-center"
+              key={tool.title} 
+              href={tool.href} 
+              className="card p-8 flex flex-col group"
             >
-              <div className="text-blue-500 text-5xl mb-4">{level.icon}</div>
-              <h4 className="text-xl font-semibold mb-2">After {level.name}</h4>
-              <p className="text-gray-500 text-sm">{level.desc}</p>
+              <div className={`w-14 h-14 rounded-xl ${tool.color} flex items-center justify-center text-3xl mb-5`}>
+                {tool.icon}
+              </div>
+              <h3 className="text-xl font-bold text-slate-900 mb-2 group-hover:text-blue-600 transition">{tool.title}</h3>
+              <p className="text-slate-600 flex-grow">{tool.desc}</p>
+              <span className="mt-6 text-blue-600 font-semibold text-sm flex items-center gap-2 group-hover:gap-3 transition-all">
+                Explore Now <span>→</span>
+              </span>
             </Link>
           ))}
-
         </div>
       </section>
 
-      {/* Latest Opportunities Section */}
-      <section className="bg-white py-16">
-        <div className="container mx-auto px-6">
-          <div className="flex justify-between items-center mb-10">
-            <h3 className="text-3xl font-bold">Latest Opportunities</h3>
-            <Link href="/opportunities" className="text-blue-600 hover:underline font-medium">View All</Link>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {latestOpportunities.map((opp, index) => (
-              <div key={index} className="bg-gray-50 p-6 rounded-2xl border border-gray-100">
-                <span className={`inline-block px-3 py-1 text-xs font-semibold text-white rounded-full mb-3 ${opp.scope === 'international' ? 'bg-purple-500' : 'bg-green-500'}`}>
-                  {opp.scope.charAt(0).toUpperCase() + opp.scope.slice(1)}
-                </span>
-                <h4 className="text-lg font-bold mb-2">{opp.title}</h4>
-                <p className="text-gray-600 text-sm mb-4">{opp.desc}</p>
-                {opp.deadline && (
-                  <p className="text-xs text-red-500 font-medium">Deadline: {opp.deadline}</p>
-                )}
-              </div>
-            ))}
-          </div>
+      {/* CTA Section */}
+      <section className="bg-white py-20 border-t border-slate-100">
+        <div className="container mx-auto px-6 max-w-4xl text-center">
+          <h2 className="text-3xl font-bold text-slate-900 mb-4">Worried about admission deadlines?</h2>
+          <p className="text-lg text-slate-600 mb-8">Stay updated with the latest universities, admissions, and government job opportunities.</p>
+          <Link href="/opportunities" className="btn-primary">
+            View Latest Opportunities
+          </Link>
         </div>
       </section>
 
