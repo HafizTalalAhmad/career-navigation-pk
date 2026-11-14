@@ -1,5 +1,9 @@
 import './globals.css'
 import Link from 'next/link'
+import { Inter } from 'next/font/google'
+
+// This loads the Inter font securely and fast
+const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
 
 export const metadata = {
   title: 'CareerPath PK - Find Your Right Path',
@@ -12,8 +16,8 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <body className="flex flex-col min-h-screen bg-slate-50">
+    <html lang="en" className={inter.variable}>
+      <body className="flex flex-col min-h-screen bg-slate-50 font-sans">
         
         {/* Sticky Modern Header */}
         <header className="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-200/80">
