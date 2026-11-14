@@ -39,7 +39,7 @@ export default function Home() {
         <div className="container mx-auto px-6 py-20 text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">Confused about your future?</h2>
           <p className="text-xl md:text-2xl mb-8 text-blue-100">Discover the perfect career path, scholarships, and opportunities after Matric, Inter, or Bachelor&apos;s.</p>
-          <button className="bg-white text-blue-600 font-bold py-3 px-8 rounded-full hover:bg-blue-50 transition">Explore Now</button>
+          <Link href="/navigator" className="bg-white text-blue-600 font-bold py-3 px-8 rounded-full hover:bg-blue-50 transition">Find My Pathway</Link>
         </div>
       </section>
 
