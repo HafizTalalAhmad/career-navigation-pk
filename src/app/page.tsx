@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 const tools = [
   { title: 'Matric-to-Career Navigator', desc: 'Enter your marks and group to see exactly which pathways are open to you.', href: '/navigator', icon: '🧭', color: 'bg-blue-50 text-blue-600' },
-  { title: 'Degree Risk & Skill Planner', desc: 'Avoid the "useless degree" trap. See realistic 4-year employment plans.', href: '/degree-planner', desc2: '', icon: '📈', color: 'bg-emerald-50 text-emerald-600' },
+  { title: 'Degree Risk & Skill Planner', desc: 'Avoid the "useless degree" trap. See realistic 4-year employment plans.', href: '/degree-planner', icon: '📈', color: 'bg-emerald-50 text-emerald-600' },
   { title: 'Funding & Scholarships', desc: 'Find verified financial aid, loans, and free IT training programs.', href: '/funding', icon: '💰', color: 'bg-amber-50 text-amber-600' },
   { title: 'Parent Confidence Report', desc: 'Generate a side-by-side comparison to help your family understand your choices.', href: '/parent-report', icon: '🤝', color: 'bg-purple-50 text-purple-600' },
 ];
